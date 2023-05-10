@@ -2,6 +2,7 @@
     --white: #fff;
     --text_color: rgb(73, 88, 124);
     --bg_color: rgb(196, 214, 214);
+    --list-style: none;
 }
 
 .header{
@@ -22,15 +23,14 @@
 }
 
 .header nav ul{
-    list-style-type: none;
-    justify-content: space-between;
+    list-style-type: var(--list-style);
 }
 
 .header nav ul li{
     display: inline-block;
 }
 
-a{
+.header nav ul li a{
     color:  var(--bg_color);
 }
 
@@ -53,4 +53,21 @@ a{
 }
 .content div p{
     margin-top: 0px;
+}
+.content div ul{
+    display: flex;
+    list-style-type: var(--list-style);
+    justify-content: space-evenly;
+}
+
+.content div ul li{
+    display: flex;
+    padding: 0 10px;
+    border-bottom: 3px solid var(--text_color);
+}
+
+
+.content div ul li a{
+    color: var(--text_color);
+    text-decoration: none;
 }
