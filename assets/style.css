@@ -1,14 +1,16 @@
 :root{
     --white: #fff;
+    --text_color: rgb(73, 88, 124);
+    --bg_color: rgb(196, 214, 214);
 }
 
 .header{
-    background-color: rgb(144, 157, 188);
-    color: var(--white);
+    background-color: var(--text_color);
+    color: var(--text_color);
 }
 .header h1{
     padding: 10px 10px 10px 50px;
-    background-color: rgb(45, 59, 59);
+    background-color: var(--bg_color);
     display: inline-block;
 }
 
@@ -29,6 +31,26 @@
 }
 
 a{
-    color:  rgb(45, 59, 59);
+    color:  var(--bg_color);
 }
 
+.content{
+    display:flex;
+    margin: 50px 0;
+    color:var(--text_color);
+    justify-content: center;
+}
+
+.content h2{
+    margin-top: 0px;
+    width: 10%;
+}
+
+.content div{
+    padding-left: 20px;
+    border-left: 3px solid var(--text_color);
+    width: 60%;
+}
+.content div p{
+    margin-top: 0px;
+}
