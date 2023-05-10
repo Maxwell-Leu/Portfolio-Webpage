@@ -17,9 +17,9 @@
 
 .header nav{
     padding-top: 20px;
-    margin-right: 20px;
     float: right;
     font-size: 20px;
+    margin-right: 50px;
 }
 
 .header nav ul{
@@ -27,7 +27,8 @@
 }
 
 .header nav ul li{
-    display: inline-block;
+    display: inline;
+    margin: 0px 10px;
 }
 
 .header nav ul li a{
@@ -51,19 +52,40 @@
     border-left: 3px solid var(--text_color);
     width: 60%;
 }
+
 .content div p{
     margin-top: 0px;
 }
+
+
+.content div img{
+    border: 5px solid var(--bg_color);
+    opacity: .4;
+    max-width: 100%;
+    flex: 1;
+}
+
+.content div img:nth-child(n+2){
+    max-width:  47%;
+    flex-shrink: 1;
+}
+
+
+.content div img:hover{
+    border: 5px dotted var(--bg_color);
+    box-shadow: 0 0 2px 1px var(--bg_color);
+    opacity: 1;
+}
+
 .content div ul{
-    display: flex;
+    display:flex;
     list-style-type: var(--list-style);
-    justify-content: space-evenly;
 }
 
 .content div ul li{
-    display: flex;
-    padding: 0 10px;
+    font-size: 20px;
     border-bottom: 3px solid var(--text_color);
+    margin: 0px 10px 0px 10px;
 }
 
 
