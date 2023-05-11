@@ -43,9 +43,13 @@
     
 }
 
+body{
+    background-color: var(--bg_color);
+}
+
 .content{
     display:flex;
-    margin: 20px 0px 30px 0;
+    margin: 30px 0px 0px 0px;
     color:var(--text_color);
     justify-content: center;
 }
@@ -61,39 +65,45 @@
 }
 
 .content div{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
     padding-left: 20px;
     border-left: 3px solid var(--text_color);
     width: 60%;
 }
 
 .content div p{
+    flex-direction: column;
     margin-top: 0px;
 }
-
+ 
 
 .content div img{
-    border: 5px solid var(--bg_color);
+    display: flex;
+    border: 5px solid var(--text_color);
+    box-sizing: border-box;
     opacity: .4;
     max-width: 100%;
-    flex: 1 1 0;
 }
 
-.content div img:nth-child(n+2){
-    max-width:  47%;
+.content div a:nth-child(n+2){
+    max-width:  50%;
+    flex-direction: row;
 }
 
 .content div img:hover{
-    border: 5px dotted var(--bg_color);
-    box-shadow: 0 0 2px 1px var(--bg_color);
     opacity: 1;
 }
 
 .content div ul{
-    display:flex;
+    display: flex;
+    align-items: center;
     list-style-type: var(--list-style);
 }
 
 .content div ul li{
+    display:flex;
     font-size: 20px;
     border-bottom: 3px solid var(--text_color);
     margin: 0px 10px 0px 10px;
@@ -120,6 +130,11 @@
         font-size: 50px;
         margin: 0px;
         justify-content: left;
+    }
+
+    .content div img{
+        
+        margin: 0px;
     }
 
     .content div{
@@ -186,19 +201,21 @@
         font-size: 30px;
     }
 
-    .content div img:nth-child(n+0){
-        max-width:100%;
+    .content div a:nth-child(n+0){
+        margin: 0px;
+        max-width:97%;
         height: auto;
     }
 
     .content div ul{
-        display: flex;
-        flex-direction: column;
-        padding-inline-start: 0px;
+        align-items: flex-start;
+        flex-direction: column; 
+        padding-inline-start: 0px; 
     }
 
     .content div ul li{
-        margin: 0px;
+        margin: 0px; 
+        
     }
     footer{
         margin: 0 5%;
