@@ -1,3 +1,4 @@
+/* genaric variable */
 :root{
     --white: #fff;
     --text_color: rgb(73, 88, 124);
@@ -5,16 +6,20 @@
     --list-style: none;
 }
 
+/* Stylise header*/
 .header{
     background-color: var(--text_color);
     color: var(--text_color);
 }
+
+/* Positions and changes the style around */
 .header h1{
     padding: 10px 10px 10px 50px;
     background-color: var(--bg_color);
     display: inline-block;
 }
 
+/* Positions the navigation bar  */
 .header nav{
     padding-top: 20px;
     float: right;
@@ -22,31 +27,37 @@
     margin-right: 50px;
 }
 
+/* Removes the bulletpoints from the items in the list */
 .header nav ul{
     list-style-type: var(--list-style);
 }
 
+/* Makes the list populate horizontal */
 .header nav ul li{
     display: inline;
     margin: 0px 10px;
 }
 
+/* Changes the color from the default */
 .header nav ul li a{
     color:  var(--bg_color);
 }
 
+/* GitHub avatar next to my name */
 .avatar{
     display: inline;
     margin-right: 5px;
     border-radius: 50%;
     max-height: 19px;
-    
+
 }
 
+/* Background for the page */
 body{
     background-color: var(--bg_color);
 }
 
+/* Set spacing via margin and orientation */
 .content{
     display:flex;
     margin: 30px 0px 0px 0px;
@@ -54,6 +65,7 @@ body{
     justify-content: center;
 }
 
+/* Format of the titles of each section */
 .content h2{
     display: flex;
     margin-top: 0px;
@@ -64,6 +76,7 @@ body{
     width: 10%;
 }
 
+/* How much space is given to the content along with the dividing line */
 .content div{
     position: relative;
     display: flex;
@@ -73,12 +86,12 @@ body{
     width: 60%;
 }
 
+/* Removes the top margin to have it flush with top of the dividing line */
 .content div p{
-    flex-direction: column;
     margin-top: 0px;
 }
- 
 
+/* Stylised images to differ when they are hovered */
 .content div img{
     display: flex;
     border: 5px solid var(--text_color);
@@ -87,56 +100,61 @@ body{
     max-width: 100%;
 }
 
+/* Changes the size of images that come after the first */
 .content div a:nth-child(n+2){
     max-width:  50%;
     flex-direction: row;
 }
 
+/* On hover images will haave full color range */
 .content div img:hover{
     opacity: 1;
 }
 
+/* Puts contact info in the center of its container and removes bulletpoints */
 .content div ul{
     display: flex;
     align-items: center;
     list-style-type: var(--list-style);
 }
 
+/* Underlines each bit of contact info */
 .content div ul li{
-    display:flex;
     font-size: 20px;
     border-bottom: 3px solid var(--text_color);
     margin: 0px 10px 0px 10px;
 }
 
-
+/* Removes hyperlink color from GitHub */
 .content div ul li a{
     color: var(--text_color);
     text-decoration: none;
 }
 
+/* Tablet screen layout */
 @media  screen and (max-width:768px) {
+    /* Sets a new boundry for the page */
     main{
         margin: 0% 10%;
         flex-direction: column;
         display:flex;
     }
+
+    /* Changes the Flex Direction */
     .content{
+        width: 100%;
         flex-direction: column;
     }
 
+    /* Gives the header more width to prevent wrapping and position it to the left side */
     .content h2{
-        width: 50%;
+        width: 100%;
         font-size: 50px;
         margin: 0px;
         justify-content: left;
     }
 
-    .content div img{
-        
-        margin: 0px;
-    }
-
+    /* Force page content to take up the whole page */
     .content div{
         width: 100%;
         padding:0px;
@@ -144,7 +162,8 @@ body{
         border-top: 3px solid var(--text_color);
         padding-top: 20px;
     }
-    
+
+    /* Gives footer the same margin as the body */
     footer{
         margin: 0% 10%;
         flex-direction: column;
@@ -152,25 +171,22 @@ body{
     }
 }
 
+/* Smart phone layout */
 @media screen and (max-width:425px) {
+    /* Changes margin */
     main{
         margin: 0% 5%;
-        flex-direction: column;
-        display:flex;
     }
 
-    .header{
-        display: block;
-    }
-
+    /* Centers and removes dead space */
     .header h1{
         padding: 0px;
-        background-color: var(--bg_color);
         display: flex;
         justify-content: center;
         margin: 0px;
     }
 
+    /* Puts nav bar below h1 */
     .header nav{
         display: flex;
         float: none;
@@ -178,6 +194,7 @@ body{
 
     }
 
+    /* Centers elements in the page */
     .header nav ul{
         display: flex;
         flex-wrap: wrap;
@@ -185,38 +202,43 @@ body{
         flex: 1px;
         justify-content: center;
     }
+    
+    /* Change font size */
     .header nav ul li{
         font-size: 15px;
     }
 
+    /* Position icon */
     .avatar{
         margin-top: 8px;
     }
 
-    main{
-        display: flex;
-    }
-
+    /* Change font */
     .content h2{
         font-size: 30px;
     }
 
+    /* changes nth child to affect everthing*/
     .content div a:nth-child(n+0){
         margin: 0px;
         max-width:97%;
         height: auto;
     }
 
+    /* Change flex direction */
     .content div ul{
         align-items: flex-start;
-        flex-direction: column; 
-        padding-inline-start: 0px; 
+        flex-direction: column;
+        padding-inline-start: 0px;
     }
 
+    /* Remove margin */
     .content div ul li{
-        margin: 0px; 
-        
+        margin: 0px;
+
     }
+
+    /* Set margin to same as main */
     footer{
         margin: 0 5%;
     }
